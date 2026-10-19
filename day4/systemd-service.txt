@@ -1,0 +1,19 @@
+[Unit]
+Description=Capstone Static Web Server
+After=network.target
+
+[Service]
+Type=simple
+User=anas
+Group=anas
+WorkingDirectory=/home/anas/Documents/Devops/capstone
+ExecStart=/usr/local/bin/http-server -p 8000 -a 0.0.0.0 -c-1
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+--- status ---
+sudo: 3 incorrect password attempts

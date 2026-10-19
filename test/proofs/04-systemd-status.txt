@@ -1,0 +1,20 @@
+● capstone.service - Capstone Books API — Spring Boot + MySQL + Redis
+     Loaded: loaded (/etc/systemd/system/capstone.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-10-19 13:09:19 PKT; 37min ago
+   Main PID: 36050 (java)
+      Tasks: 104 (limit: 34575)
+     Memory: 659.6M (peak: 698.5M)
+        CPU: 59.756s
+     CGroup: /system.slice/capstone.service
+             └─36050 /usr/bin/java -jar /home/anas/Documents/Devops/day5/app/books-api.jar --spring.profiles.active=dev
+
+Oct 19 13:46:53 anas-Predator-PHN16-72 java[36050]: 2026-10-19T13:46:53.867+05:00  WARN 36050 --- [books-api] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-books-api-group-1, groupId=books-api-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+Oct 19 13:46:54 anas-Predator-PHN16-72 java[36050]: 2026-10-19T13:46:54.904+05:00  INFO 36050 --- [books-api] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-books-api-group-1, groupId=books-api-group] Node -1 disconnected.
+Oct 19 13:46:54 anas-Predator-PHN16-72 java[36050]: 2026-10-19T13:46:54.904+05:00  WARN 36050 --- [books-api] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-books-api-group-1, groupId=books-api-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+Oct 19 13:46:54 anas-Predator-PHN16-72 java[36050]: 2026-10-19T13:46:54.904+05:00  WARN 36050 --- [books-api] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-books-api-group-1, groupId=books-api-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+Oct 19 13:46:55 anas-Predator-PHN16-72 java[36050]: 2026-10-19T13:46:55.557+05:00  INFO 36050 --- [books-api] [nio-8080-exec-3] c.i.books_api.controller.AuthController  : POST /api/auth/login — testuser
+Oct 19 13:46:55 anas-Predator-PHN16-72 java[36050]: 2026-10-19T13:46:55.557+05:00 DEBUG 36050 --- [books-api] [nio-8080-exec-3] c.i.b.service.impl.AuthServiceImpl       : Login attempt: testuser
+Oct 19 13:46:55 anas-Predator-PHN16-72 java[36050]: Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Oct 19 13:46:55 anas-Predator-PHN16-72 java[36050]: Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Oct 19 13:46:55 anas-Predator-PHN16-72 java[36050]: 2026-10-19T13:46:55.630+05:00  INFO 36050 --- [books-api] [nio-8080-exec-3] c.i.b.service.impl.AuthServiceImpl       : Login successful: testuser
+Oct 19 13:46:55 anas-Predator-PHN16-72 java[36050]: Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?

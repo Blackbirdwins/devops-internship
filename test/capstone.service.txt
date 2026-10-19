@@ -1,0 +1,17 @@
+[Unit]
+Description=Capstone Books API — Spring Boot
+After=network.target mysql.service
+
+[Service]
+Type=simple
+User=anas
+Group=anas
+WorkingDirectory=/home/anas/Documents/Devops/day5/app
+ExecStart=/usr/bin/java -jar /home/anas/Documents/Devops/day5/app/books-api.jar --spring.profiles.active=dev
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

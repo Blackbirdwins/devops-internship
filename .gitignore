@@ -1,0 +1,16 @@
+# Build artifacts
+*.jar
+*.tar.gz
+target/
+node_modules/
+
+# Backups (database dumps)
+backups/*.sql
+test/backups/
+
+# IDE
+.idea/
+.vscode/
+test/mysql-config.txt
+test/app/books-api.jar
+test/application-dev.properties.original

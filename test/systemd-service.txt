@@ -1,0 +1,6 @@
+● capstone.service - Capstone Books API — Spring Boot
+     Loaded: loaded (/etc/systemd/system/capstone.service; enabled; preset: enabled)
+     Active: activating (auto-restart) (Result: exit-code) since Mon 2026-10-19 12:13:57 PKT; 20ms ago
+    Process: 13276 ExecStart=/usr/bin/java -jar /home/anas/Documents/Devops/day5/app/books-api.jar --spring.profiles.active=dev (code=exited, status=1/FAILURE)
+   Main PID: 13276 (code=exited, status=1/FAILURE)
+        CPU: 2ms

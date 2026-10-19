@@ -1,0 +1,12 @@
+=== Cert files ===
+total 16
+drwxr-xr-x 2 root root 4096 Oct 19 06:16 .
+drwxr-xr-x 3 root root 4096 Oct 19 06:16 ..
+-rw-r--r-- 1 root root 1302 Oct 19 06:16 cert.pem
+-rw------- 1 root root 1704 Oct 19 06:16 key.pem
+
+=== Cert details ===
+subject=C = PK, ST = Punjab, L = Lahore, O = FixMate, CN = 192.168.29.141
+issuer=C = PK, ST = Punjab, L = Lahore, O = FixMate, CN = 192.168.29.141
+notBefore=Oct 19 01:16:15 2026 GMT
+notAfter=Oct 19 01:16:15 2027 GMT
