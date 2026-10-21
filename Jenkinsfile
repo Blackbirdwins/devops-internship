@@ -12,7 +12,6 @@ pipeline {
         stage('Docker Build') {
             steps {
                 echo 'Docker image ban rahi hai...'
-                // App folder mein jao aur Docker image build karo (Maven Dockerfile ke andar hai)
                 sh 'cd "Internship backend/day8/books-api-source" && docker build -t anas17702/books-api:latest .'
             }
         }
