@@ -53,6 +53,12 @@ This repository contains the daily deliverables, scripts, configurations, and pr
 *   **Deliverable:** `docker compose up` launches the full capstone stack.
 *   **Proof:** `day6/docker-compose.yml`, `day6/docker-ps.txt`, `day6/docker-app-logs.txt`
 
+### Day 7: Git Workflows & Jenkins CI/CD
+*   **Task:** Build a Jenkins pipeline to test, build, and publish a Docker image.
+*   **Deliverable:** Push to main auto-tests, builds, and publishes the capstone image.
+*   **Proof:** `Jenkinsfile`, `day7/jenkins-build-log.txt`, `day7/docker-pull-proof.txt`
+*   **Docker Hub Image:** `blackbirdwins/books-api:latest`
+
 ---
 
 ## 🚀 Tech Stack Used
