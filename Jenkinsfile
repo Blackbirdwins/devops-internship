@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Code checkout ho raha hai...'
-                git 'https://github.com/Blackbirdwins/devops-internship.git'
+                git branch: 'main', url: 'https://github.com/Blackbirdwins/devops-internship.git'
             }
         }
 
