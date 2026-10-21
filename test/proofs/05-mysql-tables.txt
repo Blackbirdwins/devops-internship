@@ -1,7 +1,0 @@
-Tables_in_books_db
-audit_logs
-books
-publishers
-users
-total_books
-10
