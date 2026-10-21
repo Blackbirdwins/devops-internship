@@ -1,11 +1,16 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKER_HUB_USER = 'blackbirdwins'
+        DOCKER_HUB_PASS = credentials('DOCKER_PASSWORD')  // Jenkins mein save kiya hua password
+        IMAGE_NAME = "blackbirdwins/books-api:latest"
+    }
+
     stages {
         stage('Checkout Backend Code') {
             steps {
                 echo 'Backend code clone ho raha hai...'
-                // Purana folder delete karo, phir fresh clone karo
                 sh 'rm -rf backend-code && git clone https://github.com/Blackbirdwins/internship-backend.git backend-code'
             }
         }
@@ -13,8 +18,15 @@ pipeline {
         stage('Docker Build') {
             steps {
                 echo 'Docker image ban rahi hai...'
-                // Backend folder ke andar jao aur Docker image build karo
-                sh 'cd backend-code/day8/books-api-source && docker build -t anas17702/books-api:latest .'
+                sh 'cd backend-code/day8/books-api-source && docker build -t $IMAGE_NAME .'
+            }
+        }
+
+        stage('Docker Push') {
+            steps {
+                echo 'Docker Hub pe push ho raha hai...'
+                sh 'echo $DOCKER_HUB_PASS | docker login -u $DOCKER_HUB_USER --password-stdin'
+                sh 'docker push $IMAGE_NAME'
             }
         }
     }
