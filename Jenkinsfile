@@ -5,8 +5,8 @@ pipeline {
         stage('Checkout Backend Code') {
             steps {
                 echo 'Backend code clone ho raha hai...'
-                // Backend repo ko clone karo
-                sh 'git clone https://github.com/Blackbirdwins/internship-backend.git backend-code'
+                // Purana folder delete karo, phir fresh clone karo
+                sh 'rm -rf backend-code && git clone https://github.com/Blackbirdwins/internship-backend.git backend-code'
             }
         }
 
