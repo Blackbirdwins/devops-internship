@@ -1,0 +1,4 @@
+latest: Pulling from blackbirdwins/books-api
+Digest: sha256:5f6897eea82349fdc32d6dd8e777de040edf10463c77636205c8613eb2a0cac8
+Status: Image is up to date for blackbirdwins/books-api:latest
+docker.io/blackbirdwins/books-api:latest
