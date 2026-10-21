@@ -2,17 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Checkout Backend Code') {
             steps {
-                echo 'Code checkout ho raha hai...'
-                git branch: 'main', url: 'https://github.com/Blackbirdwins/devops-internship.git'
+                echo 'Backend code clone ho raha hai...'
+                // Backend repo ko clone karo
+                sh 'git clone https://github.com/Blackbirdwins/internship-backend.git backend-code'
             }
         }
 
         stage('Docker Build') {
             steps {
                 echo 'Docker image ban rahi hai...'
-                sh 'cd "Internship backend/day8/books-api-source" && docker build -t anas17702/books-api:latest .'
+                // Backend folder ke andar jao aur Docker image build karo
+                sh 'cd backend-code/day8/books-api-source && docker build -t anas17702/books-api:latest .'
             }
         }
     }
