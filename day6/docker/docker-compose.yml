@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: capstone-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: books_db
+      MYSQL_USER: books_user
+      MYSQL_PASSWORD: Book@1234
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - capstone-net
+
+  redis-cache:
+    image: redis:7.0
+    container_name: capstone-redis
+    ports:
+      - "6380:6379"
+    networks:
+      - capstone-net
+
+  books-api:
+    build: "/home/anas/Documents/Internship backend/day8/books-api-source"
+    container_name: capstone-app
+    ports:
+      - "8081:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/books_db?useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: books_user
+      SPRING_DATASOURCE_PASSWORD: Book@1234
+      SPRING_REDIS_HOST: redis-cache
+      SPRING_REDIS_PORT: 6379
+    depends_on:
+      - mysql-db
+      - redis-cache
+    networks:
+      - capstone-net
+
+volumes:
+  mysql_data:
+
+networks:
+  capstone-net:
+    driver: bridge

@@ -1,0 +1,4 @@
+CONTAINER ID   IMAGE              COMMAND                  CREATED         STATUS              PORTS                                                    NAMES
+891a4e1cf416   docker_books-api   "java -jar app.jar"      3 minutes ago   Up About a minute   0.0.0.0:8081->8080/tcp, [::]:8081->8080/tcp              capstone-app
+0ee69a08ef7e   redis:7.0          "docker-entrypoint.s…"   3 minutes ago   Up 3 minutes        0.0.0.0:6380->6379/tcp, [::]:6380->6379/tcp              capstone-redis
+d16bf27e8e4d   mysql:8.0          "docker-entrypoint.s…"   3 minutes ago   Up 3 minutes        33060/tcp, 0.0.0.0:3307->3306/tcp, [::]:3307->3306/tcp   capstone-mysql
