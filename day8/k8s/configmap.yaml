@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: books-api-config
+data:
+  SPRING_DATASOURCE_URL: "jdbc:mysql://mysql-service:3306/books_db?useSSL=false&allowPublicKeyRetrieval=true"
+  SPRING_DATASOURCE_USERNAME: "books_user"
+  SPRING_DATASOURCE_PASSWORD: "Book@1234"
+  SPRING_PROFILES_ACTIVE: "dev"

@@ -1,0 +1,5 @@
+NAME                         READY   STATUS    RESTARTS   AGE
+books-api-8475689d7b-lt97s   1/1     Running   0          11m
+books-api-8475689d7b-wwt82   1/1     Running   0          11m
+mysql-799d89ddf-q2crv        1/1     Running   0          16m
+redis-7465cd84d4-h9f9q       1/1     Running   0          16m

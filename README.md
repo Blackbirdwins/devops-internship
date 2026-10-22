@@ -59,6 +59,13 @@ This repository contains the daily deliverables, scripts, configurations, and pr
 *   **Proof:** `Jenkinsfile`, `day7/jenkins-build-log.txt`, `day7/docker-pull-proof.txt`
 *   **Docker Hub Image:** `blackbirdwins/books-api:latest`
 
+### Day 8: Kubernetes Fundamentals
+*   **Task:** Deploy app to K8s with ConfigMap, Secret, health probes, and test rolling updates/rollbacks.
+*   **Deliverable:** Capstone running on a local cluster behind an Ingress, with working probes and a demonstrated rollback.
+*   **Proof:** `day8/k8s/` (all YAML manifests), `day8/proofs/` (pods, services, health, rollout history)
+*   **Minikube IP:** `192.168.49.2`
+*   **App URL:** `http://192.168.49.2:30080/actuator/health` (returns `{"status":"UP"}`)
+
 ---
 
 ## 🚀 Tech Stack Used
