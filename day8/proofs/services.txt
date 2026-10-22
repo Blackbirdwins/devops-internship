@@ -1,5 +1,5 @@
 NAME                TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
-books-api-service   NodePort    10.105.227.195   <none>        8080:30080/TCP   16m
-kubernetes          ClusterIP   10.96.0.1        <none>        443/TCP          28m
-mysql-service       ClusterIP   10.99.70.92      <none>        3306/TCP         16m
-redis-service       ClusterIP   10.108.178.70    <none>        6379/TCP         16m
+books-api-service   NodePort    10.105.227.195   <none>        8080:30080/TCP   29m
+kubernetes          ClusterIP   10.96.0.1        <none>        443/TCP          40m
+mysql-service       ClusterIP   10.99.70.92      <none>        3306/TCP         29m
+redis-service       ClusterIP   10.108.178.70    <none>        6379/TCP         29m
