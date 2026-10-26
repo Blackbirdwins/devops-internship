@@ -76,6 +76,16 @@ This repository contains the daily deliverables, scripts, configurations, and pr
     *   Grafana (dashboard: Books API Monitoring)
     *   Alert Rule: `BooksApiDown` (fired during failover drill)
 
+### Day 10: AWS Mapping & Final Demo
+*   **Task:** Map on-prem concepts to AWS services, create architecture diagram and runbook, final demo.
+*   **Deliverable:** Final repo with app code, Dockerfile, Compose file, Jenkinsfile, K8s manifests, runbook, architecture diagram, dashboard screenshots.
+*   **Proof:** `day10/aws-mapping.md`, `day10/architecture.txt`, `day10/runbook.md`, `day10/day10-report.md`
+*   **Key Components:**
+    *   AWS Mapping (EC2, RDS, ElastiCache, ALB, VPC, Route 53, CloudWatch)
+    *   Architecture Diagram (Nginx → 2 App Instances → MySQL/Redis → Prometheus/Grafana)
+    *   Runbook (Start/Stop/Backup/Restore)
+    *   Incident Story (Redis connection failure in K8s)
+
 ---
 
 ## 🚀 Tech Stack Used
