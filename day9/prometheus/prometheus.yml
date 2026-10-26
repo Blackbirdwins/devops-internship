@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+
+rule_files:
+  - "alert.rules.yml"
+
+scrape_configs:
+  - job_name: 'books-api'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['192.168.29.141:8080', '192.168.29.141:8081']

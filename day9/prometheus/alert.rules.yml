@@ -1,0 +1,11 @@
+groups:
+  - name: books-api-alerts
+    rules:
+      - alert: BooksApiDown
+        expr: up{job="books-api"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Books API instance {{ $labels.instance }} is down"
+          description: "The Books API instance {{ $labels.instance }} has been down for more than 1 minute."
