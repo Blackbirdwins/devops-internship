@@ -1,10 +1,10 @@
-# DevOps Internship — Day 1 to Day 6
+# DevOps Internship — Day 1 to Day 10
 
 **Intern:** Muhammad Anas
 **Program:** 10-Day DevOps & Infrastructure Internship
 **Repository:** [devops-internship](https://github.com/Blackbirdwins/devops-internship)
 
-This repository contains the daily deliverables, scripts, configurations, and proofs for the first 6 days of the DevOps Internship.
+This repository contains the daily deliverables, scripts, configurations, and proofs for the  10 days of the DevOps Internship.
 
 ---
 
