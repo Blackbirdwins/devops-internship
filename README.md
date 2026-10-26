@@ -66,6 +66,16 @@ This repository contains the daily deliverables, scripts, configurations, and pr
 *   **Minikube IP:** `192.168.49.2`
 *   **App URL:** `http://192.168.49.2:30080/actuator/health` (returns `{"status":"UP"}`)
 
+### Day 9: Load Balancing, High Availability & Monitoring
+*   **Task:** Put the app behind a load balancer with health checks, expose metrics scraped by Prometheus, and visualize them in Grafana.
+*   **Deliverable:** Dashboard screenshot and a fired alert from the failover drill, committed to the repo docs.
+*   **Proof:** `day9/prometheus/`, `day9/docker-compose.yml`, `day9/proofs/`, `day9/day9-report.md`
+*   **Key Components:**
+    *   Nginx Load Balancer (upstream: `8080`, `8081`)
+    *   Prometheus (metrics scraping)
+    *   Grafana (dashboard: Books API Monitoring)
+    *   Alert Rule: `BooksApiDown` (fired during failover drill)
+
 ---
 
 ## 🚀 Tech Stack Used
