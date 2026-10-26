@@ -17,6 +17,11 @@ This repository contains the daily deliverables, scripts, configurations, and pr
 | `day3/` | Networking incident note (Break/Fix exercise). |
 | `day4/` | Nginx config, SSL info, and systemd service proof. |
 | `day5/` | MySQL schema, Redis cache demo, backup/restore scripts, and proof files. |
+| `day6/` | Dockerfile, docker-compose.yml, and stack launch proofs. |
+| `day7/` | Jenkinsfile, Docker Hub push proofs, and CI/CD logs. |
+| `day8/` | Kubernetes manifests, probes, and systemd fallback report. |
+| `day9/` | Nginx load balancer config, Prometheus, Grafana dashboard, and alert proofs. |
+| `day10/` | AWS mapping, architecture diagram, runbook, and final report. |
 | `capstone/` | Static capstone app (index.html, healthz). |
 
 ---
