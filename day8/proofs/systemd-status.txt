@@ -1,0 +1,20 @@
+● capstone.service - Capstone Books API — Spring Boot + MySQL + Redis
+     Loaded: loaded (/etc/systemd/system/capstone.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-10-26 09:58:37 PKT; 1min 17s ago
+   Main PID: 4412 (java)
+      Tasks: 101 (limit: 34575)
+     Memory: 696.8M (peak: 703.8M)
+        CPU: 36.155s
+     CGroup: /system.slice/capstone.service
+             └─4412 /usr/bin/java -jar /home/anas/Documents/Devops/day5/app/books-api.jar --spring.profiles.active=dev
+
+Oct 26 09:59:52 anas-Predator-PHN16-72 java[4412]: 2026-10-26T09:59:52.819+05:00  WARN 4412 --- [books-api] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-books-api-group-1, groupId=books-api-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+Oct 26 09:59:52 anas-Predator-PHN16-72 java[4412]: 2026-10-26T09:59:52.819+05:00  WARN 4412 --- [books-api] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-books-api-group-1, groupId=books-api-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+Oct 26 09:59:52 anas-Predator-PHN16-72 java[4412]: Hibernate: select al1_0.id,al1_0.description,al1_0.event_type,al1_0.processed,al1_0.timestamp from audit_logs al1_0 where not(al1_0.processed)
+Oct 26 09:59:52 anas-Predator-PHN16-72 java[4412]: 2026-10-26T09:59:52.975+05:00 DEBUG 4412 --- [books-api] [MessageBroker-5] c.i.books_api.scheduler.AuditLogPoller   : Poller: No new audit logs
+Oct 26 09:59:53 anas-Predator-PHN16-72 java[4412]: 2026-10-26T09:59:53.820+05:00  INFO 4412 --- [books-api] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-books-api-group-1, groupId=books-api-group] Node -1 disconnected.
+Oct 26 09:59:53 anas-Predator-PHN16-72 java[4412]: 2026-10-26T09:59:53.820+05:00  WARN 4412 --- [books-api] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-books-api-group-1, groupId=books-api-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+Oct 26 09:59:53 anas-Predator-PHN16-72 java[4412]: 2026-10-26T09:59:53.820+05:00  WARN 4412 --- [books-api] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-books-api-group-1, groupId=books-api-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+Oct 26 09:59:54 anas-Predator-PHN16-72 java[4412]: 2026-10-26T09:59:54.674+05:00  INFO 4412 --- [books-api] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-books-api-group-1, groupId=books-api-group] Node -1 disconnected.
+Oct 26 09:59:54 anas-Predator-PHN16-72 java[4412]: 2026-10-26T09:59:54.674+05:00  WARN 4412 --- [books-api] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-books-api-group-1, groupId=books-api-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+Oct 26 09:59:54 anas-Predator-PHN16-72 java[4412]: 2026-10-26T09:59:54.674+05:00  WARN 4412 --- [books-api] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-books-api-group-1, groupId=books-api-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
